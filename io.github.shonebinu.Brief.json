@@ -116,18 +116,18 @@
       "name": "tldr",
       "buildsystem": "simple",
       "build-commands": [
-        "mkdir -p ${FLATPAK_DEST}/share/tldr/",
+        "mkdir -p ${FLATPAK_DEST}/share/io.github.shonebinu.Brief/tldr-data",
         "rm pages.en",
         "mv pages pages.en",
         "python3 generate_commands_index.py",
-        "cp -r pages.* ${FLATPAK_DEST}/share/tldr/",
-        "cp commands.json ${FLATPAK_DEST}/share/tldr/"
+        "cp -r pages.* ${FLATPAK_DEST}/share/io.github.shonebinu.Brief/tldr-data",
+        "cp commands.json ${FLATPAK_DEST}/share/io.github.shonebinu.Brief/tldr-data"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/tldr-pages/tldr.git",
-          "commit": "e8118ac658bccacaa34040a5bce4bb984be49906"
+          "commit": "026bc9f958f791e49c004a915e480bc35c58eb8d"
         },
         { "type": "file", "path": "./generate_commands_index.py" }
       ]
@@ -140,7 +140,8 @@
         {
           "type": "git",
           "url": "https://github.com/shonebinu/Brief",
-          "tag": "v0.3.0"
+          "tag": "v0.3.1",
+          "commit": "81d0fc76cd3d50cd7be10c82acaa6860ed1360d8"
         }
       ]
     }
